@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>My Dairy</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
+      integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      
+    ></script>
+  </head>
+  <body background="https://i.imgur.com/37uzQ6s.jpg">
+    <h1>My diary</h1>
+    <button id="new-add" tabindex="3" style="font-size:14px;margin-left:480px;width:120px;height:50px;margin-top:100px;font-size:20px"  >新增日記</button>
+    <textarea
+      id="todo-description-input"
+      placeholder="description"
+      tabindex="2"
+      rows="10"
+    ></textarea>
+    <div id="todo-input-container">
+      <!--<input type="text" id="todo-input" placeholder="new todo" tabindex="1" />-->
+      <select id="selectone" style="margin-left: 30px" >
+        <option>學業</option>
+        <option>人際</option>
+        <option>社團</option>
+      </select>
+      <select id="selecttwo" >
+        <option>快樂</option>
+        <option>生氣</option>
+        <option>難過</option>
+      </select>
+      <button id="todo-add" tabindex="3" style="font-size:14px;margin-left:300px;height:30px;width:50px;display:inline-block" >新增</button>
+      <button id="todo-no-add" tabindex="3" style="font-size:14px;height:30px;width:50px">取消</button>
+    </div>
+    
+    <section id="todos"></section>
+  </body>
+  <template id="todo-item-template">
+    <details id="" class="todo-item">
+      <summary>
+        <div>
+          <input data-id="" type="checkbox" />
+          <p class="todo-title">todo 1</p>
+          <p class="select1">select1</p>
+          <p class="select2">select2</p>
+      
+          
+        </div>
+        <button data-id="" class="delete-todo">刪除</button>
+     
+      <!--change-->
+      </summary>
+      
+      <p class="todo-description">todo 1 description</p>
+      <button data-id="" class="compile-todo" style="margin-left:420px">編輯</button>
+        <!--change-->
+        <div id="todoCompiler">
+          <select id="selectonechange" style="margin-bottom:150px;margin-left:15px">
+            <option>學業</option>
+            <option>人際</option>
+            <option>社團</option>
+          </select>
+          <select id="selecttwochange" style="margin-bottom:150px;margin-left:15px">
+            <option>快樂</option>
+            <option>生氣</option>
+            <option>難過</option>
+          </select>
+          <textarea
+          id="todo-description-inputchange"
+          placeholder="descriptionchange"
+          tabindex="2"
+          style="margin-bottom:150px;margin-left:15px"
+          rows="10"
+          cols="20"
+
+          ></textarea>
+          <button data-id="" class="save" style="margin-bottom:150px;margin-left:15px">儲存</button>
+          <button data-id="" class="cancel" style="margin-bottom:150px;margin-left:15px">取消</button>
+        </div>
+      
+      
+      <!--change-->
+
+    </details>
+  </template>
+</html>
