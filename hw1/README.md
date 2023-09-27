@@ -1,3 +1,6 @@
+
+#請先刪除自己mongodb以前的日記 避免讀入時因為本來內容就不一樣造成錯誤 謝謝
+
 # 112-1-unit1-todo-list
 
 This repository is for the first and second week of the course.
